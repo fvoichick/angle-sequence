@@ -14,4 +14,4 @@ def ham_sim(tau, eps, suc):
     a = hamiltonian_coefficients(tau, eps / 10)
     return angle_sequence(a, .9 * eps, suc), time.time()-t
 
-ham_sim(100, 1e-4, 1-1e-4)
+ham_sim(100, 1e-6, 1-1e-4)

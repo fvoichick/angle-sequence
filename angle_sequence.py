@@ -1,7 +1,9 @@
-import completion
-import decomposition
-import LPoly
 import time
+
+import LPoly
+import bauer
+import decomposition
+
 
 def angle_sequence(p, eps=1e-4, suc=1-1e-4):
     """
@@ -14,7 +16,7 @@ def angle_sequence(p, eps=1e-4, suc=1-1e-4):
 
     # Completion phase
     t = time.time()
-    g = completion.completion_from_root_finding(p_new)
+    g = bauer.completion_from_bauer(p_new)
     t_comp = time.time()
     print("Completion part finished within time ", t_comp - t)
 
